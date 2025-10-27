@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torta de Palmito com Catupiry</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>Torta de Palmito com Catupiry</h1>
+  </header>
+
+  <main>
+    <section class="detalhes">
+      <h2>Ingredientes</h2>
+      <p>Massa de torta (farinha de trigo, manteiga, leite, fermento, sal), palmito, polpa de tomate, requeijão, cebola, salsinha, alho, sal. Contém glúten, contém lactose.</p>
+    </section>
+
+    <div id="infoComum"></div>
+
+    <a href="../index.html" class="voltar">⬅ Voltar ao cardápio</a>
+  </main>
+
+  <footer>
+    <p>Pedidos ou informações</p>
+    <a href="https://wa.me/5511971505860?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20tortas!" target="_blank" class="whatsapp-link">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+  </a>
+</footer>
+
+
+  <script>
+    // Importa o conteúdo comum de forma dinâmica
+    fetch('../common/info_comum.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('infoComum').innerHTML = html;
+      })
+      .catch(err => console.error('Erro ao carregar info comum:', err));
+  </script>
+</body>
+</html>
